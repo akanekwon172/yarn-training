@@ -1,5 +1,5 @@
 'use strict';
-const request = require('request');
-request('https://www.google.com', (error, response, body) => {
-  console.log(body);
+const axios = require('axios');
+axios.get('https://www.google.com').then(res => {
+  console.log(res.data);
 });
